@@ -16,13 +16,12 @@ import javax.persistence.*;
 public class PersonajeEntity {
 	
 	@Id
-	@Column(name = "personaje_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String imagen;
 	private String nombre;
-	private int edad;
-	private double peso;
+	private Long edad;
+	private Double peso;
 	private String historia;
 	
 	@ManyToMany(mappedBy = "personajes", cascade = CascadeType.ALL)

@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class GeneroEntity {
 
 	@Id
-	@Column(name = "genero_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String nombre;

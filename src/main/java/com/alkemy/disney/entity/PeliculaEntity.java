@@ -19,7 +19,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class PeliculaEntity {
 	
 	@Id
-	@Column(name = "pelicula_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String imagen;
@@ -27,7 +26,7 @@ public class PeliculaEntity {
 	@Column(name = "fecha_creacion")
 	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private LocalDate fechaCreacion;
-	private Integer calificacion;
+	private Long calificacion;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "genero_id", insertable = false, updatable = false)
